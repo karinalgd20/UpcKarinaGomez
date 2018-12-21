@@ -1,0 +1,47 @@
+﻿@model UPC.Intranet.Modelo.Dto.Request.Detalle_SolicitudDtoRequest
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("Resultado", "BandejaDetalleSolicitud", FormMethod.Post))
+{
+    <div class="container">
+
+        <h1>Solicitud </h1>
+        <div class="form-group col-lg-12">
+
+            <div class="form-group col-md-6">
+                <label class="col-md-4 control-label">Cod Linea Negocio</label>
+                @Html.TextBoxFor(m=> m.COD_LINEA_NEGOCIO)
+
+            </div>
+
+            <div class="form-group col-md-6">
+                <label class="col-md-4 control-label">Cod Modal Estado</label>
+                @Html.TextBoxFor(m => m.COD_MODAL_EST)
+
+            </div>
+            <div class="form-group col-md-6">
+                <label class="col-md-4 control-label">Cod Periodo</label>
+                @Html.TextBoxFor(m => m.COD_PERIODO)
+
+            </div>
+            <div class="form-group col-md-6">
+                <label class="col-md-4 control-label">Cod tramite</label>
+                @Html.TextBoxFor(m => m.COD_TRAMITE)
+
+            </div>
+            <div class="form-group col-md-6">
+                <label class="col-md-4 control-label">Estado</label>
+                @Html.TextBoxFor(m => m.ESTADO)
+
+            </div>
+
+
+
+
+        </div>
+
+        <button type="submit" value="submit" class="btn btn-primary">Filtrar</button>
+    </div>
+}

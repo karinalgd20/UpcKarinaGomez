@@ -1,0 +1,100 @@
+﻿@using UPC.Intranet.Modelo.Dto.Response
+@{
+    var resultado = (List<Detalle_SolicitudDtoResponse>)ViewBag.Lista;
+}
+
+
+<h2>Resultado</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            COD_MODAL_EST
+        </th>
+        <th>
+            COD_PERIODO
+        </th>
+        <th>
+            COD_TRAMITE
+        </th>
+        <th>
+            COD_UNICO
+        </th>
+        <th>
+            ESTADO
+        </th>
+        <th>
+            COD_ALUMNO
+        </th>
+        <th>
+            COD_DETALLE
+        </th>
+        <th>
+            COD_CURSO
+        </th>
+        <th>
+            COD_TIPO_PRUEBA
+        </th>
+        <th>
+            NUM_PRUEBA
+        </th>
+        <th>
+            SECCION
+        </th>
+        <th>
+            GRUPO
+        </th>
+        <th>
+            ESTADO_GRUPO
+        </th>
+    </tr>
+
+@foreach (var item in resultado) {
+    
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_MODAL_EST)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_PERIODO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_TRAMITE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_UNICO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_ALUMNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_DETALLE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_CURSO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_TIPO_PRUEBA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_PRUEBA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SECCION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GRUPO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADO_CURSO)
+        </td>
+    </tr>
+}
+
+</table>
